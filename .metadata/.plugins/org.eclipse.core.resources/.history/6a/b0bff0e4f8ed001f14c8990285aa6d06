@@ -1,0 +1,25 @@
+package oop_concept;
+
+public class Constructor {
+	
+	int x, y;
+	
+	Constructor(){ // Default Constructor
+		
+		x=100;
+		y=200;
+	}
+	
+	Constructor(int a, int b){
+	
+		x=a;
+		y=b;
+	}
+
+	public static void main(String[] args) {
+		
+		Constructor con = new Constructor();
+		
+	}
+
+}
