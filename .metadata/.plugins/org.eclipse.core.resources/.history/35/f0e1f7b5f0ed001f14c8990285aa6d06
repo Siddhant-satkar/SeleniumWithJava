@@ -1,0 +1,10 @@
+package oop_concept;
+
+public class Session11 {
+	
+	// no parameters and  No return value
+	
+	void m1(){
+		System.out.println("HareKrishna");
+	}
+}
