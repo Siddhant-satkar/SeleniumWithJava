@@ -1,0 +1,33 @@
+/*The real-world example of interfaces is that we have multiple classes for different levels of employees working in a particular company and the necessary 
+property of the class is the salary of the employees and this. We must be implemented in every class and. Also, it is different for every employee here. 
+The concept of the interface is used. We simply create an interface containing an abstract salary method and implement it in all the classes and we can 
+easily define different salaries of the employees.
+*/
+package polymorphisam;
+
+public interface salary {
+
+	void insertsalary(int salary);
+}
+
+class SDE1 implements salary{
+	
+	int salary;
+	
+	public void insertsalary(int salary) {
+		this.salary = salary;
+	}
+	
+	void printSalary() {
+		System.out.println(this.salary);
+	}
+}
+
+class OverrdingInterfaces {
+	public static void main (String args []) {
+		
+		SDE1 checksal = new SDE1();
+		checksal.insertsalary(10000);
+		checksal.printSalary();
+	}
+}

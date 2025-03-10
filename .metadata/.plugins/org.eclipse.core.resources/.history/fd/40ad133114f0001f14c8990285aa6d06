@@ -1,0 +1,17 @@
+package polymorphisam;
+
+public class Methodoverloading {
+	
+	public void addition(int a, int b) {
+		
+		System.out.println("addition of two integer number" + (a+b));
+	}
+
+	public static void main(String[] args) {
+		
+		Methodoverloading mo1 = new Methodoverloading();
+		mo1.addition(10, 20);
+
+	}
+
+}
