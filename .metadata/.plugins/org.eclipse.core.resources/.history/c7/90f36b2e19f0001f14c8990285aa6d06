@@ -1,0 +1,35 @@
+package polymorphisam;
+
+public class Methodoverriding {
+
+	public static void main(String[] args) {
+		
+		Methodoverriding mo1 = new Dog();
+
+	}
+
+}
+
+class Sound(){
+	
+	void soundcheck() {
+	System.out.println("animal makes sounds ");
+	}
+}
+
+class Dog extends Sound {
+	
+	 @Override
+	 void soundcheck() {
+		
+		System.out.println("Dog barks");
+	}
+}
+
+class cat extends Sound {
+		
+	void soundcheck() {
+			
+		System.out.println("cat meow");
+	}
+}
