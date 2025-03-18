@@ -38,7 +38,7 @@ public class ExceptionDemo {
 		//Example 4
 		
 		String name = null;
-		System.out.println(name.length());
+		System.out.println(name.length()); // Null pointer exception
 	}
 
 }
