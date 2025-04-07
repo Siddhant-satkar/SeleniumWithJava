@@ -2,6 +2,7 @@ package selenium;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.annotations.*;
 import java.time.Duration;
 
@@ -47,17 +48,27 @@ public class Login {
 		txtbx_login.click();
 		
 		String pageTitle = driver.getTitle();
-		if(pageTitle.equalsIgnoreCase("BluePoint")) {
-			System.out.println("Login Sucessfull");
-		}else {
-			System.out.println("Login Failed");
-		}
+		
+		  if(pageTitle.equalsIgnoreCase("BluePoint")) {
+			  System.out.println("Login Sucessfull");
+		  }else {
+			  System.out.println("Login Failed");
+		  }
+		 
+		//Assert.assertEquals("Bluepoint", pageTitle);
 	}
-
+	
+	public void logOut() {
+		driver.findElement(By.xpath("//div[@class='user-menu-mobile dropdown']")).click();
+		driver.findElement(By.cssSelector("ul[class='fade-in-right dropdown-menu show'] fa-icon[class='ng-fa-icon mr-1']")).click();
+		driver.findElement(By.xpath("//button[normalize-space()='Yes']")).click();
+	}
 	@AfterTest
 	public void tearDown() throws InterruptedException{
 
-		Thread.sleep(5000);
+		Thread.sleep(10000);
+		
+		logOut();
 		driver.close();
 		driver.quit();
 	}
