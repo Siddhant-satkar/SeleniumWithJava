@@ -15,13 +15,12 @@ public class Code1 {
 		char[] arr = str.toCharArray();
 		int start = 0;
 		int end = str.length()-1;
-		
+		char[] rArr = new char [10];		
 		for(int i = end;i>=start;i--) {
 			System.out.print(arr[i]);
 		}
-	}kanha
-
-	
+		//return new String(arr);
+	}
 
 	public static void main(String args []) {
 		
